@@ -16,6 +16,23 @@ Installation
  6. Boot the Vagrant VM: `vagrant up`
 
 
+What's in the box?
+==================
+ * Apache 2.2
+ * MySQL 5
+ * Ruby 1.9.2
+ * rbenv
+ * PHP 5.2
+ * phpUnit
+ * phpMyAdmin
+ * memcached
+ * Git
+ * SVN
+ * jslint4java
+ * csslint
+ * phantomjs
+
+
 Common commands
 ===============
 Some common things you might like to do:
