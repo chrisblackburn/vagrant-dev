@@ -1,0 +1,172 @@
+SITE
+  remote: http://community.opscode.com/api/v1
+  specs:
+    apt (1.4.4)
+    build-essential (1.1.0)
+    chef_handler (1.0.6)
+    dmg (1.0.0)
+    openssl (1.0.0)
+    runit (0.15.0)
+    windows (1.3.2)
+      chef_handler (>= 0.0.0)
+    xml (1.0.4)
+    yum (0.8.0)
+
+GIT
+  remote: https://github.com/chrisblackburn/chef-cookbooks.git
+  path: npm
+  ref: master
+  sha: 7a2987c73a721c88440e6603842c6b08aea81ba0
+  specs:
+    npm (0.1.0)
+      nodejs (>= 0.0.0)
+
+GIT
+  remote: https://github.com/chrisblackburn/chef-cookbooks.git
+  path: php
+  ref: master
+  sha: 7a2987c73a721c88440e6603842c6b08aea81ba0
+  specs:
+    php (1.0.2)
+      build-essential (>= 0.0.0)
+      mysql (>= 0.0.0)
+      xml (>= 0.0.0)
+
+GIT
+  remote: https://github.com/chrisblackburn/chef-cookbooks.git
+  path: phpmyadmin
+  ref: master
+  sha: 7a2987c73a721c88440e6603842c6b08aea81ba0
+  specs:
+    phpmyadmin (0.1.0)
+
+GIT
+  remote: https://github.com/chrisblackburn/chef-cookbooks.git
+  path: phpunit
+  ref: master
+  sha: 7a2987c73a721c88440e6603842c6b08aea81ba0
+  specs:
+    phpunit (0.9.1)
+      php (>= 0.0.0)
+
+GIT
+  remote: https://github.com/chrisblackburn/chef-jscoverage.git
+  ref: master
+  sha: 993f563859e020aa133691dcd6536c50e0ac5222
+  specs:
+    jscoverage (0.0.1)
+
+GIT
+  remote: https://github.com/chrisblackburn/chef-jslint4java.git
+  ref: master
+  sha: c8449a9f2571d0cbafc6a5df24403aee24d22808
+  specs:
+    jslint4java (0.0.1)
+      unzip (>= 0.0.0)
+
+GIT
+  remote: https://github.com/customink-webops/phantomjs.git
+  ref: master
+  sha: c518cbe4f91c1e62940b205a7fb5fabec9ca884d
+  specs:
+    phantomjs (0.0.6)
+
+GIT
+  remote: https://github.com/fnichol/chef-rbenv.git
+  ref: master
+  sha: c4dbcc85e3d6dae0eb8c9dc507d5ee915b7ad480
+  specs:
+    rbenv (0.6.11)
+
+GIT
+  remote: https://github.com/fnichol/chef-ruby_build.git
+  ref: master
+  sha: c38d86966694b85db291625b245722208b40b61e
+  specs:
+    ruby_build (0.6.3)
+
+GIT
+  remote: https://github.com/mdxp/nodejs-cookbook.git
+  ref: master
+  sha: 03210c9cffc8740a4256e684fc24ccc93d169c56
+  specs:
+    nodejs (1.0.1)
+      build-essential (>= 0.0.0)
+
+GIT
+  remote: https://github.com/opscode-cookbooks/apache2.git
+  ref: master
+  sha: b8ae251222e833dd84b99da09a4f390def1cdbfb
+  specs:
+    apache2 (1.1.13)
+
+GIT
+  remote: https://github.com/opscode-cookbooks/git.git
+  ref: master
+  sha: 06ff406aad523e77d4adccaa4fe719c51a2a63f1
+  specs:
+    git (1.0.0)
+      dmg (>= 0.0.0)
+      runit (>= 0.0.0)
+      yum (>= 0.0.0)
+
+GIT
+  remote: https://github.com/opscode-cookbooks/java.git
+  ref: master
+  sha: 2796c9de3a5da93e769dc1cb57015dba1c16dd4e
+  specs:
+    java (1.5.3)
+
+GIT
+  remote: https://github.com/opscode-cookbooks/memcached.git
+  ref: master
+  sha: 0a1d6df8308916929229689de38bb1f9ee7d8893
+  specs:
+    memcached (1.0.2)
+      runit (>= 0.0.0)
+
+GIT
+  remote: https://github.com/opscode-cookbooks/mysql.git
+  ref: master
+  sha: 668b1cb914e011ffee251e087a868bd0122399d5
+  specs:
+    mysql (1.2.7)
+      openssl (>= 0.0.0)
+
+GIT
+  remote: https://github.com/opscode-cookbooks/subversion.git
+  ref: master
+  sha: e67d8f9fc6c050601a07aeae5073d254ee8d5321
+  specs:
+    subversion (1.0.0)
+      apache2 (>= 0.0.0)
+      windows (>= 0.0.0)
+
+GIT
+  remote: https://github.com/wharton/chef-unzip.git
+  ref: master
+  sha: ee280fcfe14219dd4c886d8ca770067524ba4adb
+  specs:
+    unzip (0.0.1)
+
+DEPENDENCIES
+  apache2 (>= 0)
+  apt (>= 0)
+  git (>= 0)
+  java (>= 0)
+  jscoverage (>= 0)
+  jslint4java (>= 0)
+  memcached (>= 0)
+  mysql (>= 0)
+  nodejs (>= 0)
+  npm (>= 0)
+  phantomjs (>= 0)
+  php (>= 0)
+  phpmyadmin (>= 0)
+  phpunit (>= 0)
+  phpunit (>= 0)
+  rbenv (>= 0)
+  ruby_build (>= 0)
+  subversion (>= 0)
+  unzip (>= 0)
+
