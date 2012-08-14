@@ -8,12 +8,12 @@ The VM is provisioned via Chef to ensure dependencies are kept up to date across
 
 Installation
 ============
- 1. Download (VirtualBox)[https://www.virtualbox.org/]
- 2. Install vagrant (`sudo gem install vagrant`)
- 3. Install librarian (`sudo gem install librarian`)
- 4. Clone the git repistory (`git clone https://github.com/chrisblackburn/vagrant-dev.git`)
- 5. Run librarian to download the required cookbooks (`librarian-chef install`)
- 6. Boot the Vagrant VM (`vagrant up`)
+ 1. Download [VirtualBox](https://www.virtualbox.org/)
+ 2. Install vagrant: `sudo gem install vagrant`
+ 3. Install librarian: `sudo gem install librarian`
+ 4. Clone the git repistory: `git clone https://github.com/chrisblackburn/vagrant-dev.git`
+ 5. Run librarian to download the required cookbooks: `librarian-chef install`
+ 6. Boot the Vagrant VM: `vagrant up`
 
 
 Common commands
