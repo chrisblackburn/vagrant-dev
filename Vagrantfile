@@ -2,9 +2,9 @@ Vagrant::Config.run do |config|
   config.vm.box_url = "http://files.vagrantup.com/lucid64.box"
   config.vm.box = "lucid64"
 
-  #config.vm.forward_port 80, 8000
-  #config.vm.forward_port 443, 4430
-  #config.vm.forward_port 5000, 5000
+  config.vm.forward_port 80, 8000
+  config.vm.forward_port 443, 4430
+  config.vm.forward_port 5000, 5000
 
   config.vm.share_folder "www", "/var/www/", "www"
 
