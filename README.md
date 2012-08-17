@@ -26,9 +26,11 @@ What's in the box?
  * PHP 5.2
  * phpUnit
  * phpMyAdmin
+ * ImageMagick
  * memcached
  * Git
  * SVN
+ * Sphinx
  * jslint4java
  * csslint
  * phantomjs

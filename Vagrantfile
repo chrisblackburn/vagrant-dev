@@ -14,6 +14,7 @@ Vagrant::Config.run do |config|
     
     chef.add_recipe "apt"
     chef.add_recipe "apt::update_cache"
+
     chef.add_role "apache-webserver"
     chef.add_role "mysql"
     chef.add_role "php"
@@ -21,6 +22,8 @@ Vagrant::Config.run do |config|
     chef.add_role "python"
     chef.add_role "source-control"
     chef.add_role "development"
+    chef.add_role "imagemagick"
+    chef.add_role "search"
     chef.add_role "test"
 
     chef.json = {
