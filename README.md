@@ -22,6 +22,7 @@ What's in the box?
  * MySQL 5
  * Ruby 1.9.2
  * rbenv
+ * Python (virtualenv and pip)
  * PHP 5.2
  * phpUnit
  * phpMyAdmin

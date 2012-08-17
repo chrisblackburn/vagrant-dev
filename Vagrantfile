@@ -18,6 +18,7 @@ Vagrant::Config.run do |config|
     chef.add_role "mysql"
     chef.add_role "php"
     chef.add_role "ruby"
+    chef.add_role "python"
     chef.add_role "source-control"
     chef.add_role "development"
     chef.add_role "test"

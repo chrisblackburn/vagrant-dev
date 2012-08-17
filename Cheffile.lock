@@ -1,7 +1,7 @@
 SITE
   remote: http://community.opscode.com/api/v1
   specs:
-    apt (1.4.4)
+    apt (1.4.6)
     build-essential (1.1.0)
     chef_handler (1.0.6)
     dmg (1.0.0)
@@ -67,7 +67,7 @@ GIT
 GIT
   remote: https://github.com/customink-webops/phantomjs.git
   ref: master
-  sha: c518cbe4f91c1e62940b205a7fb5fabec9ca884d
+  sha: 080161f85c9670bbd3dd0545ec56f1c1cb796288
   specs:
     phantomjs (0.0.6)
 
@@ -88,7 +88,7 @@ GIT
 GIT
   remote: https://github.com/mdxp/nodejs-cookbook.git
   ref: master
-  sha: 03210c9cffc8740a4256e684fc24ccc93d169c56
+  sha: 51a2c2af4710f586abd17622e7e9a656c46bb12c
   specs:
     nodejs (1.0.1)
       build-essential (>= 0.0.0)
@@ -96,7 +96,7 @@ GIT
 GIT
   remote: https://github.com/opscode-cookbooks/apache2.git
   ref: master
-  sha: b8ae251222e833dd84b99da09a4f390def1cdbfb
+  sha: 8139c699684d7d41f73dcd15fe816c2bcdbe2468
   specs:
     apache2 (1.1.13)
 
@@ -128,10 +128,20 @@ GIT
 GIT
   remote: https://github.com/opscode-cookbooks/mysql.git
   ref: master
-  sha: 668b1cb914e011ffee251e087a868bd0122399d5
+  sha: 9c0a347111337e423b26376aefd9399970ce0f77
   specs:
     mysql (1.2.7)
+      build-essential (>= 0.0.0)
       openssl (>= 0.0.0)
+
+GIT
+  remote: https://github.com/opscode-cookbooks/python.git
+  ref: master
+  sha: e7d06b4db5aec229a4737b8025482df013ebaefe
+  specs:
+    python (1.0.8)
+      build-essential (>= 0.0.0)
+      yum (>= 0.0.0)
 
 GIT
   remote: https://github.com/opscode-cookbooks/subversion.git
@@ -164,7 +174,7 @@ DEPENDENCIES
   php (>= 0)
   phpmyadmin (>= 0)
   phpunit (>= 0)
-  phpunit (>= 0)
+  python (>= 0)
   rbenv (>= 0)
   ruby_build (>= 0)
   subversion (>= 0)
