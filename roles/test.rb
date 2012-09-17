@@ -6,7 +6,8 @@ run_list(
   "recipe[jslint4java]",
   "recipe[jscoverage]",
   "recipe[npm]",
-  "recipe[npm::csslint]"
+  "recipe[npm::csslint]",
+  "recipe[npm::jshint]"
 )
 override_attributes(
   "jslint4java" => {
