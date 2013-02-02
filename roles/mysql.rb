@@ -12,6 +12,7 @@ default_attributes(
 override_attributes(
   "mysql" => { 
     "server_root_password" => "root", 
-    "server_repl_password" => "root" 
+    "server_repl_password" => "root",
+    "server_debian_password" => "root"
   }
 )

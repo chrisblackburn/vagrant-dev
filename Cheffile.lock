@@ -1,22 +1,23 @@
 SITE
   remote: http://community.opscode.com/api/v1
   specs:
-    apt (1.4.6)
-    build-essential (1.1.0)
-    chef_handler (1.0.6)
-    dmg (1.0.0)
+    apt (1.8.4)
+    build-essential (1.3.2)
+    chef_handler (1.1.4)
+    dmg (1.1.0)
     openssl (1.0.0)
-    postgresql (1.0.0)
+    postgresql (2.2.0)
       openssl (>= 0.0.0)
-    runit (0.15.0)
+    runit (0.16.2)
     sphinx (0.4.0)
       build-essential (>= 0)
       mysql (>= 0)
       postgresql (>= 0)
-    windows (1.3.2)
+    windows (1.8.2)
       chef_handler (>= 0.0.0)
-    xml (1.0.4)
-    yum (0.8.0)
+    xml (1.1.2)
+      build-essential (>= 0.0.0)
+    yum (2.1.0)
 
 GIT
   remote: https://github.com/chrisblackburn/chef-cookbooks.git
@@ -47,15 +48,6 @@ GIT
     phpmyadmin (0.1.0)
 
 GIT
-  remote: https://github.com/chrisblackburn/chef-cookbooks.git
-  path: phpunit
-  ref: master
-  sha: 7a2987c73a721c88440e6603842c6b08aea81ba0
-  specs:
-    phpunit (0.9.1)
-      php (>= 0.0.0)
-
-GIT
   remote: https://github.com/chrisblackburn/chef-jscoverage.git
   ref: master
   sha: 993f563859e020aa133691dcd6536c50e0ac5222
@@ -73,95 +65,100 @@ GIT
 GIT
   remote: https://github.com/customink-webops/phantomjs.git
   ref: master
-  sha: 080161f85c9670bbd3dd0545ec56f1c1cb796288
+  sha: b8c40cb48770941f7b09ef11eab0a329db0c7162
   specs:
-    phantomjs (0.0.6)
+    phantomjs (0.0.8)
 
 GIT
   remote: https://github.com/fnichol/chef-rbenv.git
   ref: master
-  sha: c4dbcc85e3d6dae0eb8c9dc507d5ee915b7ad480
+  sha: 3b1c59abc1134a50b0b8844954eca9a566aaffb8
   specs:
-    rbenv (0.6.11)
+    rbenv (0.7.3)
 
 GIT
   remote: https://github.com/fnichol/chef-ruby_build.git
   ref: master
-  sha: c38d86966694b85db291625b245722208b40b61e
+  sha: c940b5e9cd40eaba10d6285de6648f4d25fe959d
   specs:
-    ruby_build (0.6.3)
+    ruby_build (0.7.2)
 
 GIT
   remote: https://github.com/mdxp/nodejs-cookbook.git
   ref: master
-  sha: 51a2c2af4710f586abd17622e7e9a656c46bb12c
+  sha: 54e0d661f2d18979c915960d294756440e3cdd38
   specs:
-    nodejs (1.0.1)
+    nodejs (1.0.3)
+      apt (>= 0.0.0)
       build-essential (>= 0.0.0)
 
 GIT
   remote: https://github.com/opscode-cookbooks/apache2.git
   ref: master
-  sha: 8139c699684d7d41f73dcd15fe816c2bcdbe2468
+  sha: 179f765a0b4ec6c677d9cdc65900ba9adbec88ee
   specs:
-    apache2 (1.1.13)
+    apache2 (1.4.2)
 
 GIT
   remote: https://github.com/opscode-cookbooks/git.git
   ref: master
-  sha: 06ff406aad523e77d4adccaa4fe719c51a2a63f1
+  sha: 56f905c310868d4233e6ef90098a680150e2d5a9
   specs:
-    git (1.0.0)
+    git (2.1.4)
+      build-essential (>= 0.0.0)
       dmg (>= 0.0.0)
-      runit (>= 0.0.0)
+      runit (<= 0.16.2)
+      windows (>= 0.0.0)
       yum (>= 0.0.0)
 
 GIT
   remote: https://github.com/opscode-cookbooks/imagemagick.git
   ref: master
-  sha: 0e00236f086a16ab0ce93b3009bd551bb2375b86
+  sha: 20aec29c45ee3c04616bb3fa3cd5ddf4baf48f00
   specs:
     imagemagick (0.2.2)
 
 GIT
   remote: https://github.com/opscode-cookbooks/java.git
   ref: master
-  sha: 2796c9de3a5da93e769dc1cb57015dba1c16dd4e
+  sha: 03d5645cf39e439ff0e547b4a09851e113cdde33
   specs:
-    java (1.5.3)
+    java (1.9.0)
+      windows (>= 0.0.0)
 
 GIT
   remote: https://github.com/opscode-cookbooks/memcached.git
   ref: master
-  sha: 0a1d6df8308916929229689de38bb1f9ee7d8893
+  sha: d20ebe2d3c26159482eaaec39e8b97ce23348b90
   specs:
-    memcached (1.0.2)
-      runit (>= 0.0.0)
+    memcached (1.2.0)
+      runit (<= 0.16.2)
+      yum (>= 0.0.0)
 
 GIT
   remote: https://github.com/opscode-cookbooks/mysql.git
   ref: master
-  sha: 9c0a347111337e423b26376aefd9399970ce0f77
+  sha: a7128dee82afd533b5a2159d648816c8aabded09
   specs:
-    mysql (1.2.7)
+    mysql (2.1.0)
       build-essential (>= 0.0.0)
       openssl (>= 0.0.0)
 
 GIT
   remote: https://github.com/opscode-cookbooks/python.git
   ref: master
-  sha: e7d06b4db5aec229a4737b8025482df013ebaefe
+  sha: 34cb929504f9972d9d0ce66cad70254d3ab36f21
   specs:
-    python (1.0.8)
+    python (1.2.0)
       build-essential (>= 0.0.0)
       yum (>= 0.0.0)
 
 GIT
   remote: https://github.com/opscode-cookbooks/subversion.git
   ref: master
-  sha: e67d8f9fc6c050601a07aeae5073d254ee8d5321
+  sha: cad4c069deca1fbbfb6b8f4d21b6c341cc9c6b55
   specs:
-    subversion (1.0.0)
+    subversion (1.0.3)
       apache2 (>= 0.0.0)
       windows (>= 0.0.0)
 
@@ -187,7 +184,6 @@ DEPENDENCIES
   phantomjs (>= 0)
   php (>= 0)
   phpmyadmin (>= 0)
-  phpunit (>= 0)
   python (>= 0)
   rbenv (>= 0)
   ruby_build (>= 0)
