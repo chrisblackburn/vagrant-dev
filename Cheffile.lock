@@ -45,15 +45,6 @@ GIT
     phpmyadmin (0.1.0)
 
 GIT
-  remote: https://github.com/chrisblackburn/chef-cookbooks.git
-  path: phpunit
-  ref: master
-  sha: 7a2987c73a721c88440e6603842c6b08aea81ba0
-  specs:
-    phpunit (0.9.1)
-      php (>= 0.0.0)
-
-GIT
   remote: https://github.com/chrisblackburn/chef-jscoverage.git
   ref: master
   sha: 993f563859e020aa133691dcd6536c50e0ac5222
@@ -182,7 +173,6 @@ DEPENDENCIES
   phantomjs (= 0.1.0)
   php (>= 0)
   phpmyadmin (>= 0)
-  phpunit (>= 0)
   python (>= 0)
   rbenv (>= 0)
   ruby_build (>= 0)
