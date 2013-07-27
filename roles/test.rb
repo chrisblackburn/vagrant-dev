@@ -13,5 +13,11 @@ override_attributes(
     "version" => "2.0.2",
     "user" => "vagrant",
     "destination" => "/usr/lib/jslint4java"
+  },
+  "phantomjs" => {
+    "version" => "1.9.1"
+  },
+  "nodejs" => {
+    "version" => "0.10.2"
   }
 )
