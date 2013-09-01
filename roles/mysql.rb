@@ -5,13 +5,14 @@ run_list(
   "recipe[mysql::server]"
 )
 default_attributes(
-  "mysql"  => { 
-    "bind_address" => "127.0.0.1" 
+  "mysql"  => {
+    "bind_address" => "127.0.0.1"
   }
 )
 override_attributes(
-  "mysql" => { 
-    "server_root_password" => "root", 
-    "server_repl_password" => "root" 
+  "mysql" => {
+    "server_root_password"   => "root",
+    "server_repl_password"   => "root",
+    "server_debian_password" => "root"
   }
 )
