@@ -7,6 +7,7 @@ Vagrant::Config.run do |config|
   config.vm.forward_port 5000, 5000
 
   config.vm.share_folder "www", "/var/www/", "www", :nfs => true
+  config.vm.customize ["modifyvm", :id, "--memory", 2048]
   config.vm.network :hostonly, "192.168.0.99"
 
   config.vm.provision :chef_solo do |chef|
