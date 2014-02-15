@@ -5,9 +5,11 @@ Vagrant::Config.run do |config|
   config.vm.forward_port 80, 8000
   config.vm.forward_port 443, 4430
   config.vm.forward_port 5000, 5000
+  config.vm.forward_port 5001, 5001
 
-  config.vm.share_folder "www", "/var/www/", "www", :nfs => true
-  config.vm.network :hostonly, "192.168.0.99"
+  config.vm.share_folder "docs", "/home/vagrant/docs/", "/Users/chrisblackburn/Documents/"
+  config.vm.share_folder "www", "/var/www/", "www"#, :nfs => true
+  #config.vm.network :hostonly, "192.168.0.93"
 
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = ["cookbooks", "site-cookbooks"]
@@ -29,9 +31,6 @@ Vagrant::Config.run do |config|
     chef.json = {
       :phpmyadmin => {
         :hostname => 'phpmyadmin.local'
-      },
-      :jslint4java => {
-        :user => 'vagrant'
       }
     }
   end
