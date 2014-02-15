@@ -31,12 +31,9 @@ What's in the box?
  * memcached
  * Git
  * SVN
- * Sphinx
- * jslint4java
- * csslint
  * phantomjs
 
- 
+
 
 Common commands
 ===============
@@ -55,17 +52,3 @@ Restart Apache
 Force Apache to pick up the configuration changes:
 
  `sudo /etc/init.d/apache2 restart`
-
-
-Run JSLint
-----------
-You're recommended to run this before pushing any code changes upstream. Jenkins will run this task as part of the build step.
-
- `java -jar /usr/lib/jslint4java/jslint4java-2.0.2.jar <path-to-your-js-directory>/*.js`
-
-
-Run CSSLint
------------
-As with JSLint - run before pushing code changes upstream.
-
- `csslint <path-to-your-css-directory>/*.css`
