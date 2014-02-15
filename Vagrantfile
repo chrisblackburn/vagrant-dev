@@ -7,9 +7,11 @@ Vagrant::Config.run do |config|
   config.vm.forward_port 5000, 5000
   config.vm.forward_port 5001, 5001
 
-  config.vm.share_folder "docs", "/home/vagrant/docs/", "/Users/chrisblackburn/Documents/"
-  config.vm.share_folder "www", "/var/www/", "www"#, :nfs => true
   #config.vm.network :hostonly, "192.168.0.93"
+
+  config.vm.share_folder "www", "/var/www/", "www", :nfs => true
+
+  config.vm.customize ["modifyvm", :id, "--memory", 2048]
 
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = ["cookbooks", "site-cookbooks"]
