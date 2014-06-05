@@ -6,6 +6,9 @@ cookbook 'phpmyadmin',
   :git => 'https://github.com/chrisblackburn/chef-cookbooks.git',
   :path => 'phpmyadmin'
 
+cookbook 'composer',
+  :git => 'https://github.com/escapestudios-cookbooks/composer.git'
+
 cookbook 'rbenv',
   :git => 'https://github.com/fnichol/chef-rbenv.git',
   :ref => '3b1c59abc1134a50b0b8844954eca9a566aaffb8'
