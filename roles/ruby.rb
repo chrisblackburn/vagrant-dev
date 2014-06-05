@@ -10,21 +10,17 @@ run_list(
 )
 override_attributes(
   "rbenv" => {
-    "rubies" => [ 
-      "1.9.3-p194", 
+    "rubies" => [
+      "1.9.3-p194",
       "1.9.2-p290"
     ],
     "global" => "1.9.3-p194",
     "gems" => {
       "1.9.3-p194" => [{
-        "name" => "bundler",
-      }, {
-        "name" => "flog" 
+        "name" => "bundler"
       }],
       "1.9.2-p290" => [{
-        "name" => "bundler",
-      }, {
-        "name" => "flog" 
+        "name" => "bundler"
       }]
     }
   }
