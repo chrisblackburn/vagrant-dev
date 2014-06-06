@@ -2,12 +2,13 @@ site 'http://community.opscode.com/api/v1'
 
 cookbook 'apt', '1.8.4'
 
+cookbook 'composer',
+  :git => 'https://github.com/escapestudios-cookbooks/composer.git',
+  :ref => 'master'
+
 cookbook 'phpmyadmin',
   :git => 'https://github.com/chrisblackburn/chef-cookbooks.git',
   :path => 'phpmyadmin'
-
-cookbook 'composer',
-  :git => 'https://github.com/escapestudios-cookbooks/composer.git'
 
 cookbook 'rbenv',
   :git => 'https://github.com/fnichol/chef-rbenv.git',
@@ -48,7 +49,8 @@ cookbook 'php',
   :path => 'php'
 
 cookbook 'apache2',
-  :git => 'https://github.com/opscode-cookbooks/apache2.git'
+  :git => 'https://github.com/opscode-cookbooks/apache2.git',
+  :ref => 'COOK-3900'
 
 cookbook 'git',
   :git => 'https://github.com/opscode-cookbooks/git.git'

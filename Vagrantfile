@@ -1,17 +1,17 @@
 Vagrant::Config.run do |config|
-  config.vm.box_url = "http://files.vagrantup.com/lucid64.box"
-  config.vm.box = "lucid64"
+  config.vm.box_url = "https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box"
+  config.vm.box = "trusty64"
 
   config.vm.forward_port 80, 8000
   config.vm.forward_port 443, 4430
   config.vm.forward_port 5000, 5000
   config.vm.forward_port 5001, 5001
 
-  #config.vm.network :hostonly, "192.168.0.93"
+  config.vm.network :hostonly, "192.168.0.134"
 
+  config.vm.share_folder "docs", "/home/vagrant/docs/", "/Users/chrisblackburn/Documents/"
   config.vm.share_folder "www", "/var/www/", "www", :nfs => true
-
-  config.vm.customize ["modifyvm", :id, "--memory", 2048]
+  #config.vm.customize ["modifyvm", :id, "--memory", 2048]
 
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = ["cookbooks", "site-cookbooks"]

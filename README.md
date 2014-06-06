@@ -20,12 +20,12 @@ Installation
 What's in the box?
 ==================
  * Apache 2.2
- * MySQL 5
- * Ruby 1.9.2
+ * MySQL 5.5
+ * Ruby 1.9.2, 1.9.3
  * rbenv
- * Python (virtualenv and pip)
- * PHP 5.2
- * phpUnit
+ * Python 2.7 (virtualenv and pip)
+ * PHP 5.5
+ * PHP Composer
  * phpMyAdmin
  * ImageMagick
  * memcached

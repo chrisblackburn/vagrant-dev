@@ -8,6 +8,6 @@ run_list(
 )
 override_attributes(
   "php" => {
-    "version" => "5.3.10"
+    "version" => "5.5.13"
   }
 )
