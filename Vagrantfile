@@ -1,17 +1,21 @@
-Vagrant::Config.run do |config|
+Vagrant.configure(2) do |config|
   config.vm.box_url = "https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box"
   config.vm.box = "trusty64"
+  config.vm.hostname = "made-dev"
 
-  config.vm.forward_port 80, 8000
-  config.vm.forward_port 443, 4430
-  config.vm.forward_port 5000, 5000
-  config.vm.forward_port 5001, 5001
+  config.vm.network "forwarded_port", guest: 80, host: 8000
+  config.vm.network "forwarded_port", guest: 443, host: 4430
+  config.vm.network "forwarded_port", guest: 5000, host: 5000
+  config.vm.network "forwarded_port", guest: 5001, host: 5001
 
-  config.vm.network :hostonly, "192.168.0.134"
+  config.vm.network "private_network", ip: "192.168.0.100"
 
-  config.vm.share_folder "docs", "/home/vagrant/docs/", "/Users/chrisblackburn/Documents/"
-  config.vm.share_folder "www", "/var/www/", "www", :nfs => true
-  #config.vm.customize ["modifyvm", :id, "--memory", 2048]
+  config.vm.synced_folder "www/", "/var/www/", type: "nfs"
+
+  config.vm.provider "virtualbox" do |v|
+    v.memory = 2048
+    v.name = "made-dev-trusty64"
+  end
 
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = ["cookbooks", "site-cookbooks"]
