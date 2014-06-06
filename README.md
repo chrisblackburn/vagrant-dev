@@ -1,7 +1,7 @@
 Made Vagrant
 ============
 
-Vagrant will give you a virtualised development environment running Ubuntu 10.04 that supports the technologies we employ.
+Vagrant will give you a virtualised development environment running Ubuntu 14.04 that supports the technologies we employ.
 
 The VM is provisioned via Chef to ensure dependencies are kept up to date across out development estate.
 
@@ -19,7 +19,7 @@ Installation
 
 What's in the box?
 ==================
- * Apache 2.2
+ * Apache 2.4
  * MySQL 5.5
  * Ruby 1.9.2, 1.9.3
  * rbenv
