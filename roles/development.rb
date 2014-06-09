@@ -3,7 +3,8 @@ description "Tools useful for local development"
 run_list(
   "recipe[php]",
   "recipe[apache2::mod_php5]",
-  "recipe[phpmyadmin]"
+  "recipe[phpmyadmin]",
+  "recipe[cf]"
 )
 override_attributes(
   "phpmyadmin" => { 
