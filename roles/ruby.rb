@@ -12,10 +12,14 @@ run_list(
 override_attributes(
   "rbenv" => {
     "rubies" => [
+      "2.0.0-p247",
       "1.9.3-p194",
       "1.9.2-p290"
     ],
     "gems" => {
+      "2.0.0-p247" => [{
+        "name" => "bundler"
+      }],
       "1.9.3-p194" => [{
         "name" => "bundler"
       }],
