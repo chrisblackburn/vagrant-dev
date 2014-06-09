@@ -5,6 +5,10 @@ SITE
     build-essential (2.0.2)
     chef_handler (1.1.6)
     dmg (2.2.0)
+    nodejs (1.3.0)
+      apt (>= 0.0.0)
+      build-essential (>= 0.0.0)
+      yum (>= 0.0.0)
     phantomjs (0.1.0)
     runit (1.5.10)
       build-essential (>= 0.0.0)
@@ -17,15 +21,6 @@ SITE
     yum (3.2.0)
     yum-epel (0.3.6)
       yum (~> 3.0)
-
-GIT
-  remote: https://github.com/chrisblackburn/chef-cookbooks.git
-  path: npm
-  ref: master
-  sha: 8f4f1350d7082d7290321ebb33d78e6a684467cd
-  specs:
-    npm (0.1.0)
-      nodejs (>= 0.0.0)
 
 GIT
   remote: https://github.com/chrisblackburn/chef-cookbooks.git
@@ -82,14 +77,6 @@ GIT
   sha: 4d3361995a6953076951693eff1b326ab499fe1e
   specs:
     ruby_build (0.8.1)
-
-GIT
-  remote: https://github.com/hectcastro/chef-nodejs.git
-  ref: master
-  sha: 575452c831fa766d4ae860d48615a1439d042656
-  specs:
-    nodejs (0.1.0)
-      build-essential (>= 0.0.0)
 
 GIT
   remote: https://github.com/opscode-cookbooks/apache2.git
@@ -179,7 +166,6 @@ DEPENDENCIES
   memcached (>= 0)
   mysql (>= 0)
   nodejs (>= 0)
-  npm (>= 0)
   phantomjs (= 0.1.0)
   php (>= 0)
   phpmyadmin (>= 0)

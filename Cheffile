@@ -20,12 +20,7 @@ cookbook 'ruby_build',
 cookbook 'python',
   :git => 'https://github.com/opscode-cookbooks/python.git'
 
-cookbook 'nodejs',
-  :git => 'https://github.com/hectcastro/chef-nodejs.git'
-
-cookbook 'npm',
-  :git => 'https://github.com/chrisblackburn/chef-cookbooks.git',
-  :path => 'npm'
+cookbook 'nodejs'
 
 cookbook 'imagemagick',
   :git => 'https://github.com/opscode-cookbooks/imagemagick.git'
