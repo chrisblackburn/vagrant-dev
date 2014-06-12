@@ -1,20 +1,28 @@
 Made Vagrant
 ============
 
-Vagrant will give you a virtualised development environment running Ubuntu 14.04 that supports the technologies we employ.
+Vagrant will give you virtualised development environments running Ubuntu 14.04 and Ubuntu 10.04 that supports the technologies we employ.
 
 The VM is provisioned via Chef to ensure dependencies are kept up to date across out development estate.
 
 
 Installation
 ============
- 1. Download [VirtualBox](https://www.virtualbox.org/)
- 2. Install vagrant: `sudo gem install vagrant`
+ 1. Downloa d [VirtualBox](https://www.virtualbox.org/)
+ 2. Download [Vagrant](http://www.vagrantup.com/)
  3. Install librarian: `sudo gem install librarian`
  4. Install librarian-chef: `sudo gem install librarian-chef`
  5. Clone the git repistory: `git clone https://github.com/madebymade/vagrant-dev.git`
- 6. Run librarian to download the required cookbooks: `librarian-chef install`
- 7. Boot the Vagrant VM: `vagrant up`
+ 6. Run librarian to download the required cookbooks:`librarian-chef install`
+
+
+Running
+=======
+By default Ubuntu 14.04 will be targeted using the [Vagrant commands](http://docs.vagrantup.com/v2/) with no arguments.
+
+If you want Ubuntu 10.04, postfix your Vagrant commands with `lucid`:
+
+ `vagrant up lucid`
 
 
 What's in the box?
@@ -32,7 +40,6 @@ What's in the box?
  * Git
  * SVN
  * phantomjs
-
 
 
 Common commands
