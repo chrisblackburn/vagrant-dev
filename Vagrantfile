@@ -1,23 +1,7 @@
 Vagrant.configure(2) do |config|
-  config.vm.define :trusty, primary: true do |trusty|
-    trusty.vm.box_url = 'https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box'
-    trusty.vm.box = 'trusty64'
-    trusty.vm.hostname = 'made-trusty'
-
-    trusty.vm.provider :virtualbox do |v|
-      v.name = 'made-dev-trusty64'
-    end
-  end
-
-  config.vm.define :lucid, autostart: false do |lucid|
-    lucid.vm.box_url = 'http://files.vagrantup.com/lucid64.box'
-    lucid.vm.box = 'lucid64'
-    lucid.vm.hostname = 'made-lucid'
-
-    lucid.vm.provider :virtualbox do |v|
-      v.name = 'made-dev-lucid64'
-    end
-  end
+  config.vm.box_url = 'https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box'
+  config.vm.box = 'trusty64'
+  config.vm.hostname = 'made-trusty'
 
   config.vm.network 'forwarded_port', guest: 80, host: 8000
   config.vm.network 'forwarded_port', guest: 443, host: 4430
@@ -30,6 +14,7 @@ Vagrant.configure(2) do |config|
 
   config.vm.provider :virtualbox do |v|
     v.memory = 2048
+    v.name = 'made-dev-trusty64'
   end
 
   config.vm.provision :chef_solo do |chef|
