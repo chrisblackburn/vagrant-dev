@@ -2,7 +2,8 @@ name "apache-webserver"
 description "The base role for systems that serve HTTP traffic"
 run_list(
   "recipe[apache2]",
-  "recipe[apache2::mod_ssl]"
+  "recipe[apache2::mod_ssl]",
+  "recipe[apache2::mod_headers]"
 )
 default_attributes(
   "apache2" => {
