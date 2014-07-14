@@ -8,9 +8,9 @@ run_list(
   "recipe[nodejs]"
 )
 override_attributes(
-  "phpmyadmin" => { 
+  "phpmyadmin" => {
     "host" => "127.0.0.1",
-    "hostname" => "phpmyadmin.local" 
+    "hostname" => "phpmyadmin.local"
   },
   "nodejs" => {
     "version" => "0.10.28"
