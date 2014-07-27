@@ -2,3 +2,4 @@
 cookbooks
 tmp
 www/*
+.DS_Store
