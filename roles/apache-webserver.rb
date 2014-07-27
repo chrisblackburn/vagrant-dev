@@ -5,14 +5,10 @@ run_list(
   "recipe[apache2::mod_ssl]",
   "recipe[apache2::mod_headers]"
 )
-default_attributes(
-  "apache2" => {
-    "listen_ports" => [ "80", "443" ],
-    "group" => "vagrant"
-  }
-)
 override_attributes(
   "apache" => {
+    "listen_ports" => [ "80", "8000", "443" ],
+    "group" => "vagrant",
     "version" => "2.4"
   }
 )
