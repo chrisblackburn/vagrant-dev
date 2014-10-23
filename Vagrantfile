@@ -23,6 +23,7 @@ Vagrant.configure(2) do |config|
 
     chef.add_recipe 'apt'
     chef.add_recipe 'apt::update_cache'
+    chef.add_recipe 'apt::packages'
 
     chef.add_role 'apache-webserver'
     chef.add_role 'mysql'
