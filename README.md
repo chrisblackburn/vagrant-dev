@@ -8,7 +8,7 @@ The VM is provisioned via Chef to ensure dependencies are kept up to date across
 
 Installation
 ============
- 1. Downloa d [VirtualBox](https://www.virtualbox.org/)
+ 1. Download [VirtualBox](https://www.virtualbox.org/)
  2. Download [Vagrant](http://www.vagrantup.com/)
  3. Install librarian: `sudo gem install librarian`
  4. Install librarian-chef: `sudo gem install librarian-chef`
