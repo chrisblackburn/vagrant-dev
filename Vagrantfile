@@ -1,3 +1,7 @@
+unless Vagrant.has_plugin?('vagrant-omnibus')
+  raise 'vagrant-omnibus is not installed! Install with `vagrant plugin install vagrant-omnibus`'
+end
+
 Vagrant.configure(2) do |config|
   config.vm.box_url = 'https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box'
   config.vm.box = 'trusty64'
@@ -15,6 +19,8 @@ Vagrant.configure(2) do |config|
   config.vm.provider :virtualbox do |v|
     v.memory = 2048
   end
+
+  config.omnibus.chef_version = '11.8.2'
 
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = ['cookbooks', 'site-cookbooks']
