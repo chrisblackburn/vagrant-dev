@@ -1,22 +1,14 @@
 Made Vagrant
 ============
 
-Vagrant will give you virtualised a development environments running Ubuntu 14.04 that supports the technologies we employ.
-
-The VM is provisioned via Chef to ensure dependencies are kept up to date across out development estate.
-
+Out of the box, this will use a pre-built vagrant development box, running Ubuntu 14.04, which has already been provision with Chef.
 
 Installation
 ============
  1. Download [VirtualBox](https://www.virtualbox.org/)
  2. Download [Vagrant](http://www.vagrantup.com/)
- 3. Install librarian: `sudo gem install librarian`
- 4. Install librarian-chef: `sudo gem install librarian-chef`
- 5. Clone the git repistory: `git clone https://github.com/madebymade/vagrant-dev.git`
- 6. Run librarian to download the required cookbooks:`librarian-chef install`
- 7. Start Vagrant: `vagrant up`
- 8. If it doesn't do it automatically, provision the machine using Chef: `vagrant provision`
-
+ 3. Clone the git repistory: `git clone https://github.com/madebymade/vagrant-dev.git`
+ 4. Start Vagrant: `vagrant up`
 
 What's in the box?
 ==================
@@ -52,3 +44,17 @@ Restart Apache
 Force Apache to pick up the configuration changes:
 
  `sudo /etc/init.d/apache2 restart`
+
+Building a new version of the box
+
+Building the base box
+=====================
+
+There are some additonal dependencies needed if you want to build a new version of the base box.
+
+ 1. Install librarian: `sudo gem install librarian`
+ 2. Install librarian-chef: `sudo gem install librarian-chef`
+ 3. Run librarian to download the required cookbooks: `librarian-chef install`
+ 4. In the `Vagrantfile` swap `build_box` to `true`
+ 5. Start Vagrant: `vagrant up`
+ 6. If it doesn't do it automatically, provision the machine using Chef: `vagrant provision`
