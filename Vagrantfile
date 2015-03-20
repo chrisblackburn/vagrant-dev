@@ -1,9 +1,7 @@
 build_box = false
 
-if build_box
-  unless Vagrant.has_plugin?('vagrant-omnibus')
-    raise 'vagrant-omnibus is not installed! Install with `vagrant plugin install vagrant-omnibus`'
-  end
+unless Vagrant.has_plugin?('vagrant-omnibus')
+  raise 'vagrant-omnibus is not installed! Install with `vagrant plugin install vagrant-omnibus`'
 end
 
 Vagrant.configure(2) do |config|
@@ -38,32 +36,30 @@ Vagrant.configure(2) do |config|
     v.customize ['modifyvm', :id, '--natdnshostresolver1', 'on']
   end
 
-  if build_box
-    config.omnibus.chef_version = '11.8.2'
+  config.omnibus.chef_version = '11.8.2'
 
-    config.vm.provision :chef_solo do |chef|
-      chef.cookbooks_path = ['cookbooks', 'site-cookbooks']
-      chef.roles_path = ['roles']
+  config.vm.provision :chef_solo do |chef|
+    chef.cookbooks_path = ['cookbooks', 'site-cookbooks']
+    chef.roles_path = ['roles']
 
-      chef.add_recipe 'apt'
-      chef.add_recipe 'apt::update_cache'
-      chef.add_recipe 'apt::packages'
+    chef.add_recipe 'apt'
+    chef.add_recipe 'apt::update_cache'
+    chef.add_recipe 'apt::packages'
 
-      chef.add_role 'apache-webserver'
-      chef.add_role 'mysql'
-      chef.add_role 'php'
-      chef.add_role 'ruby'
-      chef.add_role 'python'
-      chef.add_role 'source-control'
-      chef.add_role 'development'
-      chef.add_role 'imagemagick'
-      chef.add_role 'test'
+    chef.add_role 'apache-webserver'
+    chef.add_role 'mysql'
+    chef.add_role 'php'
+    chef.add_role 'ruby'
+    chef.add_role 'python'
+    chef.add_role 'source-control'
+    chef.add_role 'development'
+    chef.add_role 'imagemagick'
+    chef.add_role 'test'
 
-      chef.json = {
-        :phpmyadmin => {
-          :hostname => 'phpmyadmin.local'
-        }
+    chef.json = {
+      :phpmyadmin => {
+        :hostname => 'phpmyadmin.local'
       }
-    end
+    }
   end
 end
