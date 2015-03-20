@@ -9,3 +9,7 @@ end
 package 'libpq-dev' do
   action :install
 end
+
+package 'libffi-dev' do
+  action :install
+end
