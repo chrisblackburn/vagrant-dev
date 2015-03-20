@@ -29,8 +29,13 @@ Vagrant.configure(2) do |config|
   
   config.vm.synced_folder synced_folder_path, '/var/www/', type: synced_folder_type
 
+  cpus = ENV['VAGRANT_CPUS'] || '2'
+
   config.vm.provider :virtualbox do |v|
-    v.memory = 2048
+    v.customize ['modifyvm', :id, '--memory', '2048']
+    v.customize ['modifyvm', :id, '--cpus', cpus]
+    v.customize ['modifyvm', :id, '--natdnsproxy1', 'on']
+    v.customize ['modifyvm', :id, '--natdnshostresolver1', 'on']
   end
 
   if build_box
