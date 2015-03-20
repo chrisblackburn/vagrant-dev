@@ -58,3 +58,21 @@ There are some additonal dependencies needed if you want to build a new version 
  4. In the `Vagrantfile` swap `build_box` to `true`
  5. Start Vagrant: `vagrant up`
  6. If it doesn't do it automatically, provision the machine using Chef: `vagrant provision`
+
+Once the machine has been provisioned with the required changes, try and reduce the size of the resulting packaged box file by:
+
+	vagrant ssh
+	sudo dd if=/dev/zero of=/EMPTY bs=1M
+	sudo rm -f /EMPTY
+	logout
+	vagrant halt
+
+To package the box, run:
+
+	vagrant global-status
+
+Get the ID of the machine, then run:
+
+	vagrant package --output ~/Desktop/made-dev-trusty64.box <ID>
+
+Upload the box file to S3 in the `madetech-vagrant` bucket.
