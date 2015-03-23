@@ -18,10 +18,7 @@ Vagrant.configure(2) do |config|
   synced_folder_path = ENV['SYNCED_FOLDER_PATH'] || 'www'
   synced_folder_type = ENV['SYNCED_FOLDER_TYPE'] || 'nfs'
 
-  config.vm.synced_folder synced_folder_path, '/var/www/', {
-    type: synced_folder_type,
-    mount_options: ['rw', 'vers=3', 'tcp', 'nolock'],
-  }
+  config.vm.synced_folder synced_folder_path, '/var/www/', type: synced_folder_type
 
   cpus = ENV['VAGRANT_CPUS'] || '2'
 
