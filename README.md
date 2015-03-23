@@ -55,7 +55,7 @@ There are some additonal dependencies needed if you want to build a new version 
  1. Install librarian: `sudo gem install librarian`
  2. Install librarian-chef: `sudo gem install librarian-chef`
  3. Run librarian to download the required cookbooks: `librarian-chef install`
- 4. In the `Vagrantfile` swap `build_box` to `true`
+ 4. Switch to the `build` directory: `cd build`
  5. Start Vagrant: `vagrant up`
  6. If it doesn't do it automatically, provision the machine using Chef: `vagrant provision`
 
