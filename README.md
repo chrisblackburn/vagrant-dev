@@ -59,6 +59,8 @@ There are some additonal dependencies needed if you want to build a new version 
  5. Start Vagrant: `vagrant up`
  6. If it doesn't do it automatically, provision the machine using Chef: `vagrant provision`
 
+**Note:** Vagrant Omnibus still installs the wrong version of Chef on initial provision. Just run `vagrant provision` a second time and it seems to work.
+
 Once the machine has been provisioned with the required changes, try and reduce the size of the resulting packaged box file by:
 
 	vagrant ssh
