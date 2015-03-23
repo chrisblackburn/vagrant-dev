@@ -20,7 +20,7 @@ Vagrant.configure(2) do |config|
 
   config.vm.synced_folder synced_folder_path, '/var/www/', {
     type: synced_folder_type,
-    mount_options: ['rw', 'vers=3', 'udp', 'nolock'],
+    mount_options: ['rw', 'vers=3', 'tcp', 'nolock'],
   }
 
   cpus = ENV['VAGRANT_CPUS'] || '2'
