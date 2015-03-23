@@ -1,17 +1,10 @@
-build_box = false
-
 unless Vagrant.has_plugin?('vagrant-omnibus')
   raise 'vagrant-omnibus is not installed! Install with `vagrant plugin install vagrant-omnibus`'
 end
 
 Vagrant.configure(2) do |config|
-  if build_box
-    config.vm.box_url = 'https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box'
-    config.vm.box = 'trusty64'
-  else
-    config.vm.box_url = 'https://s3-eu-west-1.amazonaws.com/madetech-vagrant/made-dev-trusty64.box'
-    config.vm.box = 'made-dev-trusty64'
-  end
+  config.vm.box_url = 'https://s3-eu-west-1.amazonaws.com/madetech-vagrant/made-dev-trusty64.box'
+  config.vm.box = 'made-dev-trusty64'
 
   config.vm.hostname = 'made-trusty'
 
@@ -42,24 +35,6 @@ Vagrant.configure(2) do |config|
     chef.cookbooks_path = ['cookbooks', 'site-cookbooks']
     chef.roles_path = ['roles']
 
-    chef.add_recipe 'apt'
-    chef.add_recipe 'apt::update_cache'
-    chef.add_recipe 'apt::packages'
-
-    chef.add_role 'apache-webserver'
-    chef.add_role 'mysql'
-    chef.add_role 'php'
-    chef.add_role 'ruby'
-    chef.add_role 'python'
-    chef.add_role 'source-control'
-    chef.add_role 'development'
-    chef.add_role 'imagemagick'
-    chef.add_role 'test'
-
-    chef.json = {
-      :phpmyadmin => {
-        :hostname => 'phpmyadmin.local'
-      }
-    }
+    chef.roles_path = ['../roles']
   end
 end
