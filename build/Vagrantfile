@@ -3,8 +3,8 @@ unless Vagrant.has_plugin?('vagrant-omnibus')
 end
 
 Vagrant.configure(2) do |config|
-  config.vm.box_url = 'https://s3-eu-west-1.amazonaws.com/madetech-vagrant/made-dev-trusty64.box'
-  config.vm.box = 'made-dev-trusty64'
+  config.vm.box_url = 'https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box'
+  config.vm.box = 'trusty64'
 
   config.vm.hostname = 'made-trusty'
 
@@ -15,7 +15,7 @@ Vagrant.configure(2) do |config|
 
   config.vm.network 'private_network', ip: '192.168.0.100'
 
-  synced_folder_path = ENV['SYNCED_FOLDER_PATH'] || 'www'
+  synced_folder_path = ENV['SYNCED_FOLDER_PATH'] || '../www'
   synced_folder_type = ENV['SYNCED_FOLDER_TYPE'] || 'nfs'
 
   config.vm.synced_folder synced_folder_path, '/var/www/', type: synced_folder_type
@@ -32,8 +32,8 @@ Vagrant.configure(2) do |config|
   config.omnibus.chef_version = '11.8.2'
 
   config.vm.provision :chef_solo do |chef|
-    chef.cookbooks_path = ['cookbooks', 'site-cookbooks']
-    chef.roles_path = ['roles']
+    chef.cookbooks_path = ['../cookbooks', '../site-cookbooks']
+    chef.roles_path = ['../roles']
 
     chef.add_role 'vagrant_dev'
   end

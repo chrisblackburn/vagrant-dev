@@ -1,22 +1,14 @@
 Made Vagrant
 ============
 
-Vagrant will give you virtualised a development environments running Ubuntu 14.04 that supports the technologies we employ.
-
-The VM is provisioned via Chef to ensure dependencies are kept up to date across out development estate.
-
+Out of the box, this will use a pre-built vagrant development box, running Ubuntu 14.04, which has already been provision with Chef.
 
 Installation
 ============
- 1. Downloa d [VirtualBox](https://www.virtualbox.org/)
+ 1. Download [VirtualBox](https://www.virtualbox.org/)
  2. Download [Vagrant](http://www.vagrantup.com/)
- 3. Install librarian: `sudo gem install librarian`
- 4. Install librarian-chef: `sudo gem install librarian-chef`
- 5. Clone the git repistory: `git clone https://github.com/madebymade/vagrant-dev.git`
- 6. Run librarian to download the required cookbooks:`librarian-chef install`
- 7. Start Vagrant: `vagrant up`
- 8. If it doesn't do it automatically, provision the machine using Chef: `vagrant provision`
-
+ 3. Clone the git repistory: `git clone https://github.com/madebymade/vagrant-dev.git`
+ 4. Start Vagrant: `vagrant up`
 
 What's in the box?
 ==================
@@ -52,3 +44,37 @@ Restart Apache
 Force Apache to pick up the configuration changes:
 
  `sudo /etc/init.d/apache2 restart`
+
+Building a new version of the box
+
+Building the base box
+=====================
+
+There are some additonal dependencies needed if you want to build a new version of the base box.
+
+ 1. Install librarian: `sudo gem install librarian`
+ 2. Install librarian-chef: `sudo gem install librarian-chef`
+ 3. Run librarian to download the required cookbooks: `librarian-chef install`
+ 4. Switch to the `build` directory: `cd build`
+ 5. Start Vagrant: `vagrant up`
+ 6. If it doesn't do it automatically, provision the machine using Chef: `vagrant provision`
+
+**Note:** Vagrant Omnibus still installs the wrong version of Chef on initial provision. Just run `vagrant provision` a second time and it seems to work.
+
+Once the machine has been provisioned with the required changes, try and reduce the size of the resulting packaged box file by:
+
+	vagrant ssh
+	sudo dd if=/dev/zero of=/EMPTY bs=1M
+	sudo rm -f /EMPTY
+	logout
+	vagrant halt
+
+To package the box, run:
+
+	vagrant global-status
+
+Get the ID of the machine, then run:
+
+	vagrant package --output ~/Desktop/made-dev-trusty64.box <ID>
+
+Upload the box file to S3 in the `madetech-vagrant` bucket.
