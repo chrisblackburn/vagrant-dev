@@ -25,9 +25,6 @@ cookbook 'nodejs'
 cookbook 'imagemagick',
   :git => 'https://github.com/opscode-cookbooks/imagemagick.git'
 
-cookbook 'jscoverage',
-  :git => 'https://github.com/chrisblackburn/chef-jscoverage.git'
-
 cookbook 'jslint4java',
   :git => 'https://github.com/chrisblackburn/chef-jslint4java.git'
 
