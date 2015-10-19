@@ -15,12 +15,16 @@ override_attributes(
   },
   "rbenv" => {
     "rubies" => [
+      "2.2.2",
       "2.2.1",
       "2.1.2",
       "1.9.3-p194",
       "1.9.2-p290"
     ],
     "gems" => {
+      "2.2.2" => [{
+        "name" => "bundler"
+      }],
       "2.2.1" => [{
         "name" => "bundler"
       }],
