@@ -55,3 +55,5 @@ cookbook 'java',
 
 cookbook 'unzip',
   :git => 'https://github.com/wharton/chef-unzip.git'
+
+cookbook 'terraform', '0.1.2'
