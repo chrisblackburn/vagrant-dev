@@ -14,7 +14,7 @@ Vagrant.configure(2) do |config|
   config.vm.network 'forwarded_port', guest: 5000, host: 5000
   config.vm.network 'forwarded_port', guest: 5001, host: 5001
 
-  config.vm.network 'private_network', ip: '192.168.0.100'
+  config.vm.network 'private_network', ip: '192.168.10.100'
 
   synced_folder_path = ENV['SYNCED_FOLDER_PATH'] || 'www'
   synced_folder_type = ENV['SYNCED_FOLDER_TYPE'] || 'nfs'
