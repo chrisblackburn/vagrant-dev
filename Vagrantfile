@@ -31,6 +31,7 @@ Vagrant.configure(2) do |config|
   end
 
   config.omnibus.chef_version = '11.8.2'
+  config.ssh.forward_agent = true
 
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = ['cookbooks', 'site-cookbooks']
