@@ -16,7 +16,8 @@ run_list(
   'role[development]',
   'role[imagemagick]',
   'role[test]',
-  'role[chef]'
+  'role[chef]',
+  'role[terraform]'
 )
 
 override_attributes(
