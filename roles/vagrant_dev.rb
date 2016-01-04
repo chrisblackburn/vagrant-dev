@@ -8,6 +8,7 @@ run_list(
   'recipe[apt::packages]',
   'role[apache-webserver]',
   'role[mysql]',
+  'role[redis]',
   'role[php]',
   'role[ruby]',
   'role[python]',
