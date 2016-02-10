@@ -13,3 +13,7 @@ end
 package 'libffi-dev' do
   action :install
 end
+
+package 'libreadline-dev' do
+  action :install
+end

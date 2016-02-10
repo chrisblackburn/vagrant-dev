@@ -17,6 +17,7 @@ override_attributes(
     "rubies" => [
       "2.2.2",
       "2.2.1",
+      "2.1.7",
       "2.1.2",
       "1.9.3-p194",
       "1.9.2-p290"
@@ -29,6 +30,9 @@ override_attributes(
         "name" => "bundler"
       }],
       "2.1.2" => [{
+        "name" => "bundler"
+      }],
+      "2.1.7" => [{
         "name" => "bundler"
       }],
       "1.9.3-p194" => [{
