@@ -1,11 +1,10 @@
 SITE
   remote: http://community.opscode.com/api/v1
   specs:
-    7-zip (1.0.2)
-      windows (>= 1.2.2)
     apt (1.8.4)
-    ark (0.9.0)
-      7-zip (>= 0.0.0)
+    ark (1.0.0)
+      build-essential (>= 0.0.0)
+      seven_zip (>= 0.0.0)
       windows (>= 0.0.0)
     build-essential (2.0.2)
     chef_handler (1.1.6)
@@ -25,7 +24,9 @@ SITE
       build-essential (>= 0.0.0)
       yum (~> 3.0)
       yum-epel (>= 0.0.0)
-    terraform (0.1.2)
+    seven_zip (1.0.4)
+      windows (>= 1.2.2)
+    terraform (0.2.1)
       ark (>= 0.0.0)
     windows (1.31.0)
       chef_handler (>= 0.0.0)
@@ -179,6 +180,6 @@ DEPENDENCIES
   redis (= 3.0.4)
   ruby_build (>= 0)
   subversion (>= 0)
-  terraform (= 0.1.2)
+  terraform (= 0.2.1)
   unzip (>= 0)
 
